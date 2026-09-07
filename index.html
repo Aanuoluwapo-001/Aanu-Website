@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aanuoluwapo Isaac Afolabi — Network &amp; IT Professional</title>
+<meta name="description" content="Aanuoluwapo Isaac Afolabi — technology professional across network administration, technical support, IT operations, teaching and data &amp; AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B1E2C;
+  --ink-2:#122A3D;
+  --ink-3:#1B3A52;
+  --paper:#EFEBE1;
+  --paper-2:#E4DECD;
+  --paper-3:#D9D2BD;
+  --signal:#2FD5B2;
+  --signal-dim:#1D9C82;
+  --amber:#E7A33E;
+  --text-on-ink:#EDEDE6;
+  --text-on-ink-dim:#9FB2C0;
+  --text-on-paper:#16232E;
+  --text-on-paper-dim:#5A6670;
+  --line-on-ink:rgba(237,237,230,0.14);
+  --line-on-paper:rgba(22,35,46,0.13);
+  --radius:2px;
+  --maxw:1180px;
+  --serif:'Source Serif 4', Georgia, serif;
+  --sans:'Space Grotesk', 'Segoe UI', sans-serif;
+  --mono:'JetBrains Mono', ui-monospace, monospace;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--text-on-paper);
+  font-family:var(--serif);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%; display:block;}
+a{color:inherit;}
+h1,h2,h3,h4{font-family:var(--sans); margin:0; font-weight:600; letter-spacing:-0.01em;}
+p{margin:0;}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 32px;}
+section{position:relative;}
+::selection{background:var(--signal); color:var(--ink);}
+
+button{font-family:inherit; cursor:pointer;}
+
+/* ---------- focus ---------- */
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
+  outline:2px solid var(--signal);
+  outline-offset:3px;
+}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  padding:18px 0;
+  transition:background .35s ease, padding .35s ease, border-color .35s ease;
+  border-bottom:1px solid transparent;
+}
+.nav.solid{
+  background:rgba(11,30,44,0.92);
+  backdrop-filter:blur(10px);
+  padding:12px 0;
+  border-color:var(--line-on-ink);
+}
+.nav .wrap{display:flex; align-items:center; justify-content:space-between;}
+.nav-mark{
+  font-family:var(--mono); font-size:14px; color:var(--text-on-ink);
+  letter-spacing:0.02em; text-decoration:none; display:flex; align-items:center; gap:8px;
+}
+.nav-mark .dot{width:7px; height:7px; border-radius:50%; background:var(--signal); box-shadow:0 0 8px var(--signal); flex:none;}
+.nav-links{display:flex; gap:30px; list-style:none; margin:0; padding:0;}
+.nav-links a{
+  font-family:var(--sans); font-size:14.5px; color:var(--text-on-ink-dim);
+  text-decoration:none; position:relative; padding:4px 0; transition:color .2s ease;
+}
+.nav-links a:hover, .nav-links a.active{color:var(--text-on-ink);}
+.nav-links a.active::after{
+  content:''; position:absolute; left:0; right:0; bottom:-3px; height:2px; background:var(--signal);
+}
+.nav-cta{
+  font-family:var(--sans); font-size:14px; font-weight:500; color:var(--ink);
+  background:var(--signal); padding:9px 18px; border-radius:var(--radius);
+  text-decoration:none; border:none; transition:background .2s ease, transform .2s ease;
+}
+.nav-cta:hover{background:#3EE9C4; transform:translateY(-1px);}
+.nav-toggle{display:none; background:none; border:none; color:var(--text-on-ink); padding:6px;}
+.nav-toggle svg{width:24px; height:24px;}
+.mobile-panel{
+  display:none; position:fixed; inset:0; z-index:99; background:var(--ink);
+  padding:100px 32px 40px; flex-direction:column; gap:26px;
+}
+.mobile-panel.open{display:flex;}
+.mobile-panel a{font-family:var(--sans); font-size:22px; color:var(--text-on-ink); text-decoration:none;}
+.mobile-panel .nav-cta{align-self:flex-start; margin-top:10px;}
+
+@media (max-width:860px){
+  .nav-links{display:none;}
+  .nav .nav-cta{display:none;}
+  .nav-toggle{display:block;}
+}
+
+/* ---------- hero ---------- */
+.hero{
+  background:var(--ink);
+  color:var(--text-on-ink);
+  padding:170px 0 110px;
+  overflow:hidden;
+  position:relative;
+}
+.hero-grid{
+  position:absolute; inset:0; opacity:0.55; pointer-events:none;
+  background-image:
+    linear-gradient(var(--line-on-ink) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-on-ink) 1px, transparent 1px);
+  background-size:56px 56px;
+  mask-image:radial-gradient(ellipse 80% 60% at 30% 20%, black 0%, transparent 75%);
+}
+.hero .wrap{
+  position:relative; z-index:2;
+  display:grid; grid-template-columns:1.15fr 0.85fr; gap:60px; align-items:center;
+}
+.status-line{
+  display:inline-flex; align-items:center; gap:9px;
+  font-family:var(--mono); font-size:12.5px; color:var(--text-on-ink-dim);
+  border:1px solid var(--line-on-ink); padding:7px 13px; border-radius:20px;
+  margin-bottom:34px;
+}
+.status-line .dot{width:6px; height:6px; border-radius:50%; background:var(--signal); animation:pulse-dot 2.2s ease-in-out infinite;}
+@keyframes pulse-dot{0%,100%{opacity:1;} 50%{opacity:0.35;}}
+.hero h1{
+  font-size:clamp(34px, 5vw, 54px); line-height:1.06; color:#fff; margin-bottom:22px;
+}
+.hero h1 span{display:block;}
+.hero h1 .name{font-size:0.44em; font-weight:500; color:var(--text-on-ink-dim); letter-spacing:0.01em; margin-bottom:10px;}
+.hero-lede{
+  font-family:var(--serif); font-size:19px; color:var(--text-on-ink-dim);
+  max-width:52ch; margin-bottom:38px;
+}
+.hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:56px;}
+.btn{
+  font-family:var(--sans); font-size:15px; font-weight:500; text-decoration:none;
+  padding:13px 24px; border-radius:var(--radius); display:inline-flex; align-items:center; gap:9px;
+  transition:transform .2s ease, background .2s ease, border-color .2s ease;
+  border:1px solid transparent;
+}
+.btn-primary{background:var(--signal); color:var(--ink);}
+.btn-primary:hover{background:#3EE9C4; transform:translateY(-2px);}
+.btn-ghost{border-color:var(--line-on-ink); color:var(--text-on-ink);}
+.btn-ghost:hover{border-color:var(--text-on-ink-dim); transform:translateY(-2px);}
+.btn-dark{border-color:var(--line-on-paper); color:var(--text-on-paper);}
+.btn-dark:hover{background:var(--ink); color:#fff; border-color:var(--ink); transform:translateY(-2px);}
+
+.hero-stats{display:flex; gap:38px; flex-wrap:wrap;}
+.hero-stats div{border-left:1px solid var(--line-on-ink); padding-left:16px;}
+.hero-stats b{display:block; font-family:var(--mono); font-size:22px; color:#fff; font-weight:500;}
+.hero-stats span{font-size:13px; color:var(--text-on-ink-dim);}
+
+.hero-photo-wrap{position:relative; display:flex; justify-content:center;}
+.ring{
+  position:absolute; border:1px solid var(--line-on-ink); border-radius:50%;
+  top:50%; left:50%; transform:translate(-50%,-50%);
+}
+.ring.r1{width:330px; height:330px;}
+.ring.r2{width:390px; height:390px; border-color:rgba(237,237,230,0.08);}
+.flip-card{
+  width:280px; height:340px; perspective:1400px; cursor:pointer;
+  position:relative; z-index:2;
+}
+.flip-inner{
+  width:100%; height:100%; position:relative; transition:transform .8s cubic-bezier(.4,.2,.2,1);
+  transform-style:preserve-3d;
+}
+.flip-card.flipped .flip-inner{transform:rotateY(180deg);}
+.flip-face{
+  position:absolute; inset:0; backface-visibility:hidden; border-radius:6px; overflow:hidden;
+  border:1px solid var(--line-on-ink); background:var(--ink-2);
+}
+.flip-face img{width:100%; height:100%; object-fit:cover;}
+.flip-back{transform:rotateY(180deg);}
+.flip-hint{
+  text-align:center; font-family:var(--mono); font-size:11.5px; color:var(--text-on-ink-dim);
+  margin-top:16px; display:flex; align-items:center; justify-content:center; gap:6px;
+}
+.flip-hint svg{width:13px; height:13px;}
+.caption-tag{
+  position:absolute; bottom:12px; left:12px; right:12px;
+  background:rgba(11,30,44,0.85); backdrop-filter:blur(4px);
+  padding:8px 10px; border-radius:4px; font-family:var(--mono); font-size:11px;
+  color:var(--signal); opacity:0; transition:opacity .3s ease;
+}
+.flip-card.flipped .caption-tag{opacity:1;}
+
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr; gap:50px;}
+  .hero-photo-wrap{order:-1;}
+  .hero{padding:130px 0 70px;}
+}
+
+/* ---------- section shared ---------- */
+.kicker{
+  font-family:var(--mono); font-size:12.5px; color:var(--signal-dim);
+  margin-bottom:14px; display:block;
+}
+.on-ink .kicker{color:var(--signal);}
+.section-head{max-width:640px; margin-bottom:56px;}
+.section-head h2{font-size:clamp(26px,3.4vw,38px); line-height:1.15; color:var(--text-on-paper);}
+.on-ink .section-head h2{color:#fff;}
+.section-head p{font-family:var(--serif); font-size:17px; color:var(--text-on-paper-dim); margin-top:16px; max-width:56ch;}
+.on-ink .section-head p{color:var(--text-on-ink-dim);}
+.pad{padding:100px 0;}
+.on-ink{background:var(--ink); color:var(--text-on-ink);}
+
+/* ---------- about ---------- */
+.about-grid{display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:start;}
+.about-copy p{font-family:var(--serif); font-size:18px; line-height:1.75; color:var(--text-on-paper); margin-bottom:20px;}
+.about-copy p:last-child{margin-bottom:0;}
+.about-side{
+  border-left:2px solid var(--ink); padding-left:26px;
+}
+.pull-quote{font-family:var(--serif); font-style:italic; font-size:21px; line-height:1.5; color:var(--ink); margin-bottom:28px;}
+.about-facts{display:grid; grid-template-columns:1fr 1fr; gap:20px 24px;}
+.about-facts div{font-family:var(--mono); font-size:12.5px; color:var(--text-on-paper-dim);}
+.about-facts b{display:block; font-family:var(--sans); font-size:15px; color:var(--text-on-paper); font-weight:600; margin-bottom:3px;}
+@media (max-width:820px){.about-grid{grid-template-columns:1fr; gap:40px;} .about-side{border-left:none; border-top:2px solid var(--ink); padding-left:0; padding-top:26px;}}
+
+/* ---------- journey timeline ---------- */
+.timeline{position:relative; margin-top:20px;}
+.timeline::before{
+  content:''; position:absolute; left:15px; top:6px; bottom:6px; width:1px; background:var(--line-on-ink);
+}
+.tl-item{position:relative; padding:0 0 0 52px; margin-bottom:6px;}
+.tl-item:last-child .tl-body{border-bottom:none;}
+.tl-node{
+  position:absolute; left:6px; top:26px; width:19px; height:19px; border-radius:50%;
+  background:var(--ink); border:1px solid var(--signal); display:flex; align-items:center; justify-content:center;
+  z-index:2;
+}
+.tl-node::after{content:''; width:6px; height:6px; border-radius:50%; background:var(--signal);}
+.tl-body{border-bottom:1px solid var(--line-on-ink); padding:24px 0;}
+.tl-header{
+  display:flex; justify-content:space-between; align-items:baseline; gap:16px; cursor:pointer;
+  flex-wrap:wrap;
+}
+.tl-header h3{font-size:18px; color:#fff;}
+.tl-org{font-family:var(--sans); font-size:14.5px; color:var(--signal); margin-top:3px; display:block;}
+.tl-date{font-family:var(--mono); font-size:12.5px; color:var(--text-on-ink-dim); white-space:nowrap;}
+.tl-chevron{width:16px; height:16px; flex:none; transition:transform .3s ease; color:var(--text-on-ink-dim);}
+.tl-item.open .tl-chevron{transform:rotate(180deg);}
+.tl-details{
+  max-height:0; overflow:hidden; transition:max-height .4s ease;
+}
+.tl-item.open .tl-details{max-height:600px;}
+.tl-details ul{margin:16px 0 0; padding-left:18px; color:var(--text-on-ink-dim); font-family:var(--serif); font-size:15.5px; line-height:1.7;}
+.tl-details li{margin-bottom:7px;}
+@media (max-width:600px){
+  .tl-header{flex-direction:column; gap:4px;}
+}
+
+/* ---------- tabs / expertise ---------- */
+.tabs-nav{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:44px; border-bottom:1px solid var(--line-on-paper); padding-bottom:0;}
+.tab-btn{
+  background:none; border:none; font-family:var(--sans); font-size:14.5px; font-weight:500;
+  color:var(--text-on-paper-dim); padding:12px 4px; margin-right:26px; position:relative; white-space:nowrap;
+}
+.tab-btn::after{content:''; position:absolute; left:0; right:0; bottom:-1px; height:2px; background:transparent; transition:background .2s ease;}
+.tab-btn.active{color:var(--text-on-paper);}
+.tab-btn.active::after{background:var(--ink);}
+.tab-panel{display:none;}
+.tab-panel.active{display:block; animation:fadein .35s ease;}
+@keyframes fadein{from{opacity:0;} to{opacity:1;}}
+
+.expertise-body{display:grid; grid-template-columns:1.2fr 1fr; gap:56px; align-items:start;}
+.expertise-copy p{font-family:var(--serif); font-size:17.5px; line-height:1.75; color:var(--text-on-paper); margin-bottom:16px;}
+.expertise-list{list-style:none; margin:22px 0 0; padding:0; display:grid; gap:12px;}
+.expertise-list li{
+  display:flex; gap:12px; align-items:flex-start; font-family:var(--sans); font-size:15px; color:var(--text-on-paper);
+}
+.expertise-list svg{flex:none; width:17px; height:17px; margin-top:2px; color:var(--signal-dim);}
+.expertise-card{
+  background:var(--paper-2); border:1px solid var(--line-on-paper); border-radius:6px; padding:30px;
+}
+.expertise-card h4{font-size:14px; text-transform:none; color:var(--text-on-paper-dim); font-family:var(--mono); font-weight:400; margin-bottom:18px;}
+.mini-stat{display:flex; justify-content:space-between; padding:12px 0; border-top:1px solid var(--line-on-paper); font-family:var(--sans); font-size:14.5px;}
+.mini-stat:first-of-type{border-top:none;}
+.mini-stat b{font-family:var(--mono); color:var(--ink); font-weight:500;}
+
+.caricature-aside{
+  margin-top:24px; display:flex; gap:16px; align-items:center; background:var(--ink); border-radius:6px; padding:16px;
+}
+.caricature-aside img{width:64px; height:64px; object-fit:cover; border-radius:50%; flex:none; border:2px solid var(--signal);}
+.caricature-aside p{font-family:var(--mono); font-size:12px; color:var(--text-on-ink-dim); line-height:1.6;}
+
+@media (max-width:820px){.expertise-body{grid-template-columns:1fr;}}
+
+/* ---------- skills / signal bars ---------- */
+.skills-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px 44px;}
+.skill-row{padding:16px 0; border-bottom:1px solid var(--line-on-paper);}
+.skill-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;}
+.skill-name{font-family:var(--sans); font-size:15px; font-weight:500; color:var(--text-on-paper);}
+.skill-tier{font-family:var(--mono); font-size:11.5px; color:var(--text-on-paper-dim);}
+.bars{display:flex; gap:4px;}
+.bar{width:26px; height:7px; background:var(--paper-3); border-radius:1px; transform-origin:left; transform:scaleX(0); transition:background .3s ease;}
+.skill-row.in-view .bar.filled{background:var(--signal-dim);}
+.skill-row.in-view .bar{animation:barfill .5s ease forwards;}
+.bar:nth-child(1){animation-delay:.02s;}
+.bar:nth-child(2){animation-delay:.10s;}
+.bar:nth-child(3){animation-delay:.18s;}
+.bar:nth-child(4){animation-delay:.26s;}
+@keyframes barfill{to{transform:scaleX(1);}}
+@media (max-width:700px){.skills-grid{grid-template-columns:1fr;}}
+
+/* ---------- projects ---------- */
+.projects-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:26px;}
+.project-card{
+  background:var(--ink); color:var(--text-on-ink); border-radius:6px; padding:34px;
+  display:flex; flex-direction:column; min-height:260px; position:relative; overflow:hidden;
+}
+.project-card .p-tag{font-family:var(--mono); font-size:11.5px; color:var(--signal); margin-bottom:16px;}
+.project-card h3{font-size:20px; color:#fff; margin-bottom:12px;}
+.project-card p{font-family:var(--serif); font-size:15.5px; color:var(--text-on-ink-dim); line-height:1.7; flex:1;}
+.project-card .p-meta{
+  margin-top:20px; padding-top:16px; border-top:1px solid var(--line-on-ink);
+  font-family:var(--mono); font-size:12px; color:var(--text-on-ink-dim); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+}
+.project-card.placeholder{
+  justify-content:center;
+}
+@media (max-width:820px){.projects-grid{grid-template-columns:1fr;}}
+
+/* ---------- achievements ---------- */
+.achieve-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line-on-paper); border:1px solid var(--line-on-paper);}
+.achieve-item{background:var(--paper); padding:32px 28px;}
+.achieve-num{font-family:var(--mono); font-size:28px; color:var(--ink); font-weight:500; margin-bottom:6px; display:block;}
+.achieve-item h4{font-family:var(--sans); font-size:15px; font-weight:600; margin-bottom:8px;}
+.achieve-item p{font-family:var(--serif); font-size:14.5px; color:var(--text-on-paper-dim); line-height:1.6;}
+@media (max-width:820px){.achieve-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){.achieve-grid{grid-template-columns:1fr;}}
+
+/* ---------- certifications ---------- */
+.cert-filters{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:36px;}
+.cert-filter{
+  font-family:var(--sans); font-size:13.5px; color:var(--text-on-paper-dim); background:var(--paper-2);
+  border:1px solid var(--line-on-paper); padding:8px 15px; border-radius:20px; transition:all .2s ease;
+}
+.cert-filter.active, .cert-filter:hover{background:var(--ink); color:#fff; border-color:var(--ink);}
+.cert-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(230px,1fr)); gap:22px;}
+.cert-card{
+  background:#fff; border:1px solid var(--line-on-paper); border-radius:6px; overflow:hidden; cursor:pointer;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.cert-card:hover{transform:translateY(-4px); box-shadow:0 14px 30px rgba(11,30,44,0.12);}
+.cert-thumb{aspect-ratio:4/3; overflow:hidden; background:var(--paper-2); position:relative;}
+.cert-thumb img{width:100%; height:100%; object-fit:cover; object-position:top;}
+.cert-thumb.no-image{display:flex; align-items:center; justify-content:center;}
+.cert-thumb.no-image svg{width:36px; height:36px; color:var(--paper-3);}
+.cert-info{padding:16px 18px;}
+.cert-info h4{font-family:var(--sans); font-size:14.5px; font-weight:600; line-height:1.35; margin-bottom:6px;}
+.cert-info span{font-family:var(--mono); font-size:11.5px; color:var(--text-on-paper-dim);}
+.cert-card[data-cat]{display:none;}
+.cert-card.show{display:block;}
+
+/* lightbox */
+.lightbox{
+  position:fixed; inset:0; background:rgba(11,30,44,0.92); z-index:200; display:none;
+  align-items:center; justify-content:center; padding:40px 20px;
+}
+.lightbox.open{display:flex;}
+.lightbox-inner{max-width:640px; width:100%; background:#fff; border-radius:8px; overflow:hidden; max-height:88vh; display:flex; flex-direction:column;}
+.lightbox-inner img{width:100%; object-fit:contain; max-height:60vh; background:var(--paper-2);}
+.lightbox-text{padding:22px 26px;}
+.lightbox-text h4{font-size:17px; margin-bottom:6px;}
+.lightbox-text p{font-family:var(--mono); font-size:12.5px; color:var(--text-on-paper-dim); line-height:1.8;}
+.lightbox-close{
+  position:absolute; top:26px; right:30px; background:none; border:1px solid var(--line-on-ink);
+  color:#fff; width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+}
+.lightbox-close svg{width:18px; height:18px;}
+
+/* ---------- education ---------- */
+.edu-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+.edu-card{border:1px solid var(--line-on-paper); border-radius:6px; overflow:hidden; background:var(--paper-2); cursor:pointer; transition:transform .25s ease, box-shadow .25s ease;}
+.edu-card:hover{transform:translateY(-4px); box-shadow:0 14px 30px rgba(11,30,46,0.12);}
+.edu-card .edu-thumb{aspect-ratio:16/10; overflow:hidden; background:#fff;}
+.edu-card .edu-thumb img{width:100%; height:100%; object-fit:cover; object-position:top;}
+.edu-card .edu-body{padding:24px 26px 28px;}
+.edu-card h3{font-size:17px; margin-bottom:6px;}
+.edu-card .edu-org{font-family:var(--sans); font-size:14px; color:var(--text-on-paper-dim); margin-bottom:14px; display:block;}
+.edu-card p{font-family:var(--serif); font-size:14.5px; color:var(--text-on-paper); line-height:1.6;}
+.edu-card .edu-meta{margin-top:14px; padding-top:14px; border-top:1px solid var(--line-on-paper); font-family:var(--mono); font-size:12px; color:var(--text-on-paper-dim);}
+@media (max-width:820px){.edu-grid{grid-template-columns:1fr;}}
+
+/* ---------- interests ---------- */
+.interest-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+.interest-card{padding:30px; border:1px solid var(--line-on-ink); border-radius:6px; transition:border-color .25s ease, background .25s ease;}
+.interest-card:hover{border-color:var(--signal); background:var(--ink-2);}
+.interest-card svg{width:26px; height:26px; color:var(--signal); margin-bottom:18px;}
+.interest-card h3{color:#fff; font-size:17px; margin-bottom:10px;}
+.interest-card p{font-family:var(--serif); font-size:14.5px; color:var(--text-on-ink-dim); line-height:1.65;}
+@media (max-width:820px){.interest-grid{grid-template-columns:1fr;}}
+
+/* ---------- contact ---------- */
+.contact-wrap{display:grid; grid-template-columns:1.1fr 0.9fr; gap:60px; align-items:center;}
+.contact-copy h2{font-size:clamp(28px,4vw,42px); margin-bottom:20px;}
+.contact-copy p{font-family:var(--serif); font-size:18px; color:var(--text-on-paper-dim); max-width:48ch; margin-bottom:32px;}
+.contact-cards{display:grid; gap:14px;}
+.contact-card{
+  display:flex; align-items:center; gap:16px; padding:20px 22px; background:var(--paper-2);
+  border:1px solid var(--line-on-paper); border-radius:6px; text-decoration:none; color:var(--text-on-paper);
+  transition:border-color .2s ease, transform .2s ease;
+}
+.contact-card:hover{border-color:var(--ink); transform:translateX(4px);}
+.contact-card svg{width:20px; height:20px; flex:none; color:var(--ink);}
+.contact-card b{display:block; font-family:var(--sans); font-size:14.5px; font-weight:600;}
+.contact-card span{font-family:var(--mono); font-size:12.5px; color:var(--text-on-paper-dim);}
+@media (max-width:820px){.contact-wrap{grid-template-columns:1fr;}}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink); color:var(--text-on-ink-dim); padding:36px 0;}
+footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;}
+footer p{font-family:var(--mono); font-size:12.5px;}
+
+/* reveal for skill rows via JS intersection */
+.reveal-io{opacity:1;}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="siteNav">
+  <div class="wrap">
+    <a href="#top" class="nav-mark"><span class="dot"></span>AANU.AFOLABI</a>
+    <ul class="nav-links">
+      <li><a href="#about" data-nav>About</a></li>
+      <li><a href="#journey" data-nav>Journey</a></li>
+      <li><a href="#expertise" data-nav>Expertise</a></li>
+      <li><a href="#projects" data-nav>Projects</a></li>
+      <li><a href="#certifications" data-nav>Certifications</a></li>
+      <li><a href="#contact" data-nav>Contact</a></li>
+    </ul>
+    <a href="Aanu-Afolabi-cv.pdf" download class="nav-cta">Download CV</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#about">About</a>
+  <a href="#journey">Journey</a>
+  <a href="#expertise">Expertise</a>
+  <a href="#projects">Projects</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#contact">Contact</a>
+  <a href="Aanu-Afolabi-cv.pdf" download class="btn btn-primary">Download CV</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero-grid"></div>
+  <div class="wrap">
+    <div>
+      <div class="status-line"><span class="dot"></span><span id="statusText">Open to new opportunities — Abuja, Nigeria</span></div>
+      <h1>
+        <span class="name">Aanuoluwapo Isaac Afolabi</span>
+        <span>Networks, support, and systems that keep people connected.</span>
+      </h1>
+      <p class="hero-lede">A technology professional working across network administration, technical support, and IT operations — with a parallel track in teaching, HR, and now data analytics &amp; AI.</p>
+      <div class="hero-ctas">
+        <a href="Aanu-Afolabi-cv.pdf" download class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
+          Download CV
+        </a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>7+ yrs</b><span>IT, support &amp; operations</span></div>
+        <div><b>₦2M+</b><span>saved on infrastructure projects</span></div>
+        <div><b>15+</b><span>professional certifications</span></div>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="flip-card" id="flipCard">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <img src="images/profile.jpg" alt="Aanuoluwapo Isaac Afolabi, professional headshot">
+          </div>
+          <div class="flip-face flip-back">
+            <img src="images/caricature.jpg" alt="Illustrated caricature of Aanuoluwapo presenting on cybersecurity">
+            <div class="caption-tag">Also known as: the guy who explains firewalls at parties</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="flip-hint">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 2l4 4-4 4M3 12v-2a4 4 0 014-4h14M7 22l-4-4 4-4M21 12v2a4 4 0 01-4 4H3"/></svg>
+      click the photo
+    </div>
+  </div>
+</header>
+
+<!-- ============ ABOUT ============ -->
+<section class="pad" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">About</span>
+      <h2>Started with a love for fixing broken things.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>My path into technology began at the LAUTECH ICT Centre in Ogbomosho, where I first got hands-on with local, metropolitan, and wide-area networks as a support intern. What started as curiosity about why a connection dropped or a system slowed down turned into a career spent finding those answers for other people — first as an intern, then as a network administrator, then as someone clients call when nothing else has worked.</p>
+        <p>Along the way, the work kept widening. At Fixxers Telecommunications I moved from pure network administration into HR and admin leadership, learning that keeping an organisation running smoothly is as much about people and policy as it is about routers and cabling. At The NAOWA College, I stepped into a classroom for the first time as a Digital Technologies teacher and exam officer, and found I genuinely enjoy explaining complex systems in ways that make sense to beginners — a skill that now shows up in how I write documentation, mentor students in the Coding Club, and support non-technical customers through their own tech problems.</p>
+        <p>Today I split my time between freelance IT and customer support work, teaching, and building out a foundation in data analytics and AI — because the tools I care about (networks, wireless systems, security) are all being reshaped by data, and I want to be fluent in that shift rather than catch up to it later.</p>
+      </div>
+      <div class="about-side">
+        <p class="pull-quote">"I like being the person who makes the complicated thing feel simple — whether that's a broken VPN or a first-year student's first line of code."</p>
+        <div class="about-facts">
+          <div><b>Based in</b>Abuja, Nigeria</div>
+          <div><b>Working style</b>Remote &amp; on-site</div>
+          <div><b>Core domains</b>Networks &amp; support</div>
+          <div><b>Currently studying</b>Data Analytics &amp; AI</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOURNEY ============ -->
+<section class="pad on-ink" id="journey">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Professional journey</span>
+      <h2>Six roles, one throughline: keep systems and people running.</h2>
+      <p>From a first internship on university networks to leading IT and HR operations, teaching, and now freelance consulting. Click any role to see the detail.</p>
+    </div>
+
+    <div class="timeline" id="timeline">
+
+      <div class="tl-item">
+        <div class="tl-node"></div>
+        <div class="tl-body">
+          <div class="tl-header">
+            <div>
+              <h3>Support Intern</h3>
+              <span class="tl-org">LAUTECH ICT Centre — Ogbomosho, Nigeria</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:14px;">
+              <span class="tl-date">May 2019 – Dec 2019</span>
+              <svg class="tl-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="tl-details">
+            <ul>
+              <li>Contributed to the design, implementation, and maintenance of LAN, MAN, and WAN infrastructure.</li>
+              <li>Provided dedicated technical support for network-related challenges, troubleshooting connectivity issues.</li>
+              <li>Documented network configurations, operational procedures, and troubleshooting guides.</li>
+              <li>Executed routine maintenance to guarantee optimal performance and security.</li>
+              <li>Collaborated with the IT team to develop and deploy network configurations.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-node"></div>
+        <div class="tl-body">
+          <div class="tl-header">
+            <div>
+              <h3>Intern</h3>
+              <span class="tl-org">BAYTEM Computer Engineering Enterprises — Nigeria</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:14px;">
+              <span class="tl-date">May 2019 – Aug 2021</span>
+              <svg class="tl-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="tl-details">
+            <ul>
+              <li>Resolved complex technical issues, significantly reducing system downtime.</li>
+              <li>Optimised network performance and security through efficient network management practices.</li>
+              <li>Leveraged the Microsoft ecosystem and VMware to enhance system performance.</li>
+              <li>Managed collaboration tools, improving team productivity and inter-departmental communication.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-node"></div>
+        <div class="tl-body">
+          <div class="tl-header">
+            <div>
+              <h3>IT Support (Remote)</h3>
+              <span class="tl-org">Seyi Online Services — Nigeria</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:14px;">
+              <span class="tl-date">May 2021 – Aug 2023</span>
+              <svg class="tl-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="tl-details">
+            <ul>
+              <li>Remotely resolved intricate technical issues, minimising downtime and lifting productivity.</li>
+              <li>Delivered prompt, effective technical support that enhanced customer satisfaction.</li>
+              <li>Authored and maintained detailed documentation of technical issues and their resolutions.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-node"></div>
+        <div class="tl-body">
+          <div class="tl-header">
+            <div>
+              <h3>Network Administrator / Assistant Chief of Staff (Admin) &amp; HR Manager</h3>
+              <span class="tl-org">Fixxers Telecommunications Limited — Abuja, Nigeria</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:14px;">
+              <span class="tl-date">Sep 2021 – Mar 2024</span>
+              <svg class="tl-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="tl-details">
+            <ul>
+              <li>Directed personnel operations, overseeing staff management and professional development.</li>
+              <li>Formulated and enforced organisational policies to improve efficiency and compliance.</li>
+              <li>Conducted network infrastructure surveys and maintained intricate network architectures.</li>
+              <li>Configured IP phones and communication systems for seamless on-site operations.</li>
+              <li>Managed projects to a cost saving of over ₦2 million.</li>
+              <li>Instituted network management practices that guaranteed reliable, secure operations.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-node"></div>
+        <div class="tl-body">
+          <div class="tl-header">
+            <div>
+              <h3>Digital Technologies Teacher / Exam Officer</h3>
+              <span class="tl-org">The NAOWA College — Kurudu, Abuja, Nigeria</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:14px;">
+              <span class="tl-date">May 2024 – Present</span>
+              <svg class="tl-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="tl-details">
+            <ul>
+              <li>Consistently achieved high WAEC and NECO examination pass rates.</li>
+              <li>Mentored students in the Coding Club, leading them to victory in local coding competitions.</li>
+              <li>Spearheaded network upgrades to improve performance and minimise downtime.</li>
+              <li>Designed, implemented, and maintained the school's Computer-Based Test system.</li>
+              <li>Coordinated athletics and ball games teams, guiding them to competition medals.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-node"></div>
+        <div class="tl-body">
+          <div class="tl-header">
+            <div>
+              <h3>Freelance IT &amp; Customer Support Specialist</h3>
+              <span class="tl-org">Self-employed — Remote</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:14px;">
+              <span class="tl-date">2023 – Present</span>
+              <svg class="tl-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="tl-details">
+            <ul>
+              <li>Delivered remote technical support to clients including Seyi Online Services and Fixxers Telecommunications.</li>
+              <li>Provided multichannel customer support via email, live chat, and phone with consistently high satisfaction.</li>
+              <li>Diagnosed and resolved network, VPN, and remote-access issues for a geographically distributed client base.</li>
+              <li>Managed help-desk tickets end-to-end, prioritising by severity and impact.</li>
+              <li>Authored knowledge-base articles and FAQs to streamline future support.</li>
+              <li>Collaborated with cross-functional remote teams across multiple time zones.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERTISE (tabs) ============ -->
+<section class="pad" id="expertise">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">What I do</span>
+      <h2>Five areas, one working style.</h2>
+      <p>Technical depth, delivered with patience — whether the audience is a frustrated customer, a classroom of students, or a network diagram.</p>
+    </div>
+
+    <div class="tabs-nav" id="tabsNav">
+      <button class="tab-btn active" data-tab="tab-support">Customer &amp; technical support</button>
+      <button class="tab-btn" data-tab="tab-tech">Technology &amp; IT</button>
+      <button class="tab-btn" data-tab="tab-data">Data &amp; AI</button>
+      <button class="tab-btn" data-tab="tab-leadership">Leadership &amp; people</button>
+      <button class="tab-btn" data-tab="tab-teaching">Teaching &amp; mentorship</button>
+    </div>
+
+    <div class="tab-panel active" id="tab-support">
+      <div class="expertise-body">
+        <div class="expertise-copy">
+          <p>This is where I'm strongest: sitting between a technical problem and the person affected by it. Years of remote support work have taught me that resolution speed matters less than whether the person on the other end actually feels heard and unblocked.</p>
+          <p>I've built this into a repeatable practice — triaging by severity, documenting recurring issues so they stop recurring, and writing guides that let non-technical users solve their own problems next time.</p>
+          <ul class="expertise-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Multichannel support: email, live chat, and phone</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>End-to-end help-desk ticket management</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>VPN, remote-access &amp; connectivity troubleshooting</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Customer onboarding &amp; platform adoption</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Knowledge-base &amp; FAQ authorship</li>
+          </ul>
+        </div>
+        <div class="expertise-card">
+          <h4>evidence on file</h4>
+          <div class="mini-stat"><span>Clients supported</span><b>Seyi Online, Fixxers &amp; more</b></div>
+          <div class="mini-stat"><span>Channels covered</span><b>Email · chat · phone</b></div>
+          <div class="mini-stat"><span>Confidentiality</span><b>Strict data protection</b></div>
+          <div class="mini-stat"><span>Time zones</span><b>Cross-region collaboration</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-tech">
+      <div class="expertise-body">
+        <div class="expertise-copy">
+          <p>My technical foundation is in networks — LAN, MAN, and WAN design and maintenance, IP telephony, and infrastructure that has to stay up whether or not anyone is watching. I hold a degree in Computer Engineering from LAUTECH and have carried that grounding through every IT role since.</p>
+          <p>I'm equally comfortable auditing an existing network as I am building one from scratch, and I lean on the Microsoft ecosystem and VMware for day-to-day systems administration.</p>
+          <ul class="expertise-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Network architecture, surveys &amp; monitoring</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>IP telephony &amp; communication systems</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Microsoft ecosystem &amp; VMware administration</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Information security fundamentals</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Python for scripting &amp; automation</li>
+          </ul>
+          <div class="caricature-aside">
+            <img src="images/caricature.jpg" alt="Caricature illustration of Aanuoluwapo holding a laptop in front of a cybersecurity whiteboard">
+            <p>Illustrated self-portrait — because a resume about firewalls should get to have one fun slide.</p>
+          </div>
+        </div>
+        <div class="expertise-card">
+          <h4>evidence on file</h4>
+          <div class="mini-stat"><span>Degree</span><b>B.Tech, Computer Engineering</b></div>
+          <div class="mini-stat"><span>Cost savings delivered</span><b>₦2M+</b></div>
+          <div class="mini-stat"><span>Security coursework</span><b>Cisco &amp; Saylor Academy</b></div>
+          <div class="mini-stat"><span>Systems</span><b>Windows, VMware, network hardware</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-data">
+      <div class="expertise-body">
+        <div class="expertise-copy">
+          <p>My newest track. I'm currently building formal grounding in data analytics and AI — coursework in management information systems and business analytics sits alongside a dedicated Data Analytics &amp; AI certification, because I think the next decade of network and infrastructure work will be shaped by how well people can read the data those systems produce.</p>
+          <p>It also connects directly to a longer-standing interest: applying AI to wireless networks, where signal, capacity, and reliability problems are increasingly data problems first.</p>
+          <ul class="expertise-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Data Analytics &amp; AI — Ihifix Academy (2026)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Management Information Systems — Saylor Academy</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Applied interest: AI for wireless networks</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Python as a foundation for future analysis work</li>
+          </ul>
+        </div>
+        <div class="expertise-card">
+          <h4>evidence on file</h4>
+          <div class="mini-stat"><span>Latest credential</span><b>Data Analytics &amp; AI, 2026</b></div>
+          <div class="mini-stat"><span>MIS grade</span><b>88.00</b></div>
+          <div class="mini-stat"><span>Related interest</span><b>AI for wireless networks</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-leadership">
+      <div class="expertise-body">
+        <div class="expertise-copy">
+          <p>At Fixxers Telecommunications, my role stretched well beyond networking into people leadership — as Assistant Chief of Staff (Admin) and HR Manager, I directed personnel operations and helped formalise the policies that kept the organisation compliant and efficient as it grew.</p>
+          <p>That experience is backed by a professional certification in Human Resource Management, and it shapes how I manage help-desk teams, mentor students, and coordinate cross-time-zone collaborators today.</p>
+          <ul class="expertise-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Personnel operations &amp; professional development</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Organisational policy formulation &amp; compliance</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Project management to budget &amp; timeline</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Health, safety &amp; environment compliance</li>
+          </ul>
+        </div>
+        <div class="expertise-card">
+          <h4>evidence on file</h4>
+          <div class="mini-stat"><span>Title held</span><b>Asst. Chief of Staff &amp; HR Manager</b></div>
+          <div class="mini-stat"><span>HR certification</span><b>Rahn Wesley Institute</b></div>
+          <div class="mini-stat"><span>PM certifications</span><b>2 — Graduate &amp; Professional</b></div>
+          <div class="mini-stat"><span>HSE record</span><b>3 levels, 2 with Distinction</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-teaching">
+      <div class="expertise-body">
+        <div class="expertise-copy">
+          <p>Since 2024 I've taught Digital Technologies at The NAOWA College and served as exam officer — a role that turned out to fit surprisingly well alongside IT work, since both come down to translating something complex into something a person can actually use.</p>
+          <p>I'm a TRCN-registered teacher with a Post Graduate Diploma in Education, and I coach the school's Coding Club and athletics teams alongside my classroom duties.</p>
+          <ul class="expertise-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Digital Technologies curriculum &amp; exam administration</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Coding Club mentorship &amp; competition coaching</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Computer-Based Test system design &amp; upkeep</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Athletics &amp; ball games team coordination</li>
+          </ul>
+        </div>
+        <div class="expertise-card">
+          <h4>evidence on file</h4>
+          <div class="mini-stat"><span>TRCN registration</span><b>CT/R/34047</b></div>
+          <div class="mini-stat"><span>PGDE</span><b>National Teachers' Institute</b></div>
+          <div class="mini-stat"><span>Exam results</span><b>High WAEC / NECO pass rates</b></div>
+          <div class="mini-stat"><span>Coding Club</span><b>Local competition wins</b></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="pad" style="background:var(--paper-2); padding-top:80px; padding-bottom:80px;">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:40px;">
+      <span class="kicker">Skill signal</span>
+      <h2>Where the strongest signal is.</h2>
+      <p>A rough read on depth of experience — core strengths built over years, alongside the areas I'm actively growing into.</p>
+    </div>
+    <div class="skills-grid" id="skillsGrid">
+      <!-- rows injected by data below, but written statically for reliability -->
+      <div class="skill-row"><div class="skill-top"><span class="skill-name">Network administration</span><span class="skill-tier">Core strength</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div></div></div>
+      <div class="skill-row"><div class="skill-top"><span class="skill-name">Technical troubleshooting</span><span class="skill-tier">Core strength</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div></div></div>
+      <div class="skill-row"><div class="skill-top"><span class="skill-name">Customer support</span><span class="skill-tier">Core strength</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div></div></div>
+      <div class="skill-row"><div class="skill-top"><span class="skill-name">Teaching &amp; mentorship</span><span class="skill-tier">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+      <div class="skill-row"><div class="skill-top"><span class="skill-name">HR &amp; people management</span><span class="skill-tier">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+      <div class="skill-row"><div class="skill-top"><span class="skill-name">Project management</span><span class="skill-tier">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+      <div class="skill-row"><div class="skill-top"><span class="skill-name">Health, safety &amp; environment</span><span class="skill-tier">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+      <div class="skill-row"><div class="skill-top"><span class="skill-name">Python programming</span><span class="skill-tier">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+      <div class="skill-row"><div class="skill-top"><span class="skill-name">Data analytics &amp; AI</span><span class="skill-tier">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="pad on-ink" id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Projects</span>
+      <h2>Work that shipped, and stayed shipped.</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <span class="p-tag">Education · systems</span>
+        <h3>School Computer-Based Test system</h3>
+        <p>Designed, implemented, and maintain the Computer-Based Test platform used for exams at The NAOWA College — from infrastructure setup to day-to-day reliability during exam windows.</p>
+        <div class="p-meta"><span>The NAOWA College</span><span>2024 – ongoing</span></div>
+      </div>
+      <div class="project-card">
+        <span class="p-tag">Telecommunications · infrastructure</span>
+        <h3>Network infrastructure upgrade</h3>
+        <p>Led network infrastructure surveys, redesigned parts of the network architecture, and configured IP telephony systems at Fixxers Telecommunications — delivering project cost savings exceeding ₦2 million.</p>
+        <div class="p-meta"><span>Fixxers Telecommunications</span><span>2021 – 2024</span></div>
+      </div>
+      <div class="project-card">
+        <span class="p-tag">Mentorship · education</span>
+        <h3>Coding Club mentorship program</h3>
+        <p>Coach and mentor for The NAOWA College Coding Club, guiding students through their first real programs and into local coding competitions — which they've gone on to win.</p>
+        <div class="p-meta"><span>The NAOWA College</span><span>2024 – ongoing</span></div>
+      </div>
+      <div class="project-card placeholder">
+        <span class="p-tag">Coming soon</span>
+        <h3>The Aanu Platform</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section class="pad">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Achievements</span>
+      <h2>Numbers and moments that stuck.</h2>
+    </div>
+    <div class="achieve-grid">
+      <div class="achieve-item">
+        <span class="achieve-num">₦2M+</span>
+        <h4>Project cost savings</h4>
+        <p>Delivered through successful network infrastructure project management at Fixxers Telecommunications.</p>
+      </div>
+      <div class="achieve-item">
+        <span class="achieve-num">3</span>
+        <h4>HSE certification levels</h4>
+        <p>Completed Levels 1, 2 &amp; 3 with the UK SHE Organisation — two of them with Distinction.</p>
+      </div>
+      <div class="achieve-item">
+        <span class="achieve-num">1</span>
+        <h4>Coding Club, competition-winning</h4>
+        <p>Mentored The NAOWA College Coding Club to victory in local coding competitions.</p>
+      </div>
+      <div class="achieve-item">
+        <span class="achieve-num">↑</span>
+        <h4>WAEC &amp; NECO pass rates</h4>
+        <p>Consistently high student pass rates as Digital Technologies teacher and exam officer.</p>
+      </div>
+      <div class="achieve-item">
+        <span class="achieve-num">1</span>
+        <h4>CBT system, built &amp; maintained</h4>
+        <p>Designed and continue to maintain the school's Computer-Based Test examination system.</p>
+      </div>
+      <div class="achieve-item">
+        <span class="achieve-num">🏅</span>
+        <h4>Athletics &amp; ball games medals</h4>
+        <p>Coordinated school sports teams to medal finishes in inter-school competitions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section class="pad" style="background:var(--paper-2);" id="certifications">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Certifications</span>
+      <h2>15+ certifications across technology, business, safety and people.</h2>
+      <p>Filter by category, or click any certificate to view it in full.</p>
+    </div>
+
+    <div class="cert-filters" id="certFilters">
+      <button class="cert-filter active" data-filter="all">All</button>
+      <button class="cert-filter" data-filter="tech">Technology</button>
+      <button class="cert-filter" data-filter="business">Business &amp; data</button>
+      <button class="cert-filter" data-filter="safety">Safety &amp; environment</button>
+      <button class="cert-filter" data-filter="people">People &amp; project</button>
+    </div>
+
+    <div class="cert-grid" id="certGrid">
+
+      <div class="cert-card show" data-cat="tech" data-img="images/cert-infosec.jpg" data-title="Information Security" data-meta="Saylor Academy · Issued 10 Sep 2025 · Grade 95.92 · 46 hours">
+        <div class="cert-thumb"><img src="images/cert-infosec.jpg" alt="Information Security certificate"></div>
+        <div class="cert-info"><h4>Information Security</h4><span>Saylor Academy · 2025</span></div>
+      </div>
+
+      <div class="cert-card show" data-cat="tech" data-img="images/cert-swe.jpg" data-title="Software Engineering" data-meta="Saylor Academy · Issued 11 Sep 2025 · Grade 82.26 · 36 hours">
+        <div class="cert-thumb"><img src="images/cert-swe.jpg" alt="Software Engineering certificate"></div>
+        <div class="cert-info"><h4>Software Engineering</h4><span>Saylor Academy · 2025</span></div>
+      </div>
+
+      <div class="cert-card show" data-cat="tech" data-title="Introduction to Cybersecurity" data-meta="Cisco Certified Networking Academy">
+        <div class="cert-thumb no-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg></div>
+        <div class="cert-info"><h4>Introduction to Cybersecurity</h4><span>CISCO Networking Academy</span></div>
+      </div>
+
+      <div class="cert-card show" data-cat="business" data-title="Data Analytics &amp; AI" data-meta="Ihifix Academy · 2026">
+        <div class="cert-thumb no-image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg></div>
+        <div class="cert-info"><h4>Data Analytics &amp; AI</h4><span>Ihifix Academy · 2026</span></div>
+      </div>
+
+      <div class="cert-card show" data-cat="business" data-img="images/cert-mis.jpg" data-title="Management Information Systems" data-meta="Saylor Academy · Issued 3 Nov 2025 · Grade 88.00 · 57 hours">
+        <div class="cert-thumb"><img src="images/cert-mis.jpg" alt="Management Information Systems certificate"></div>
+        <div class="cert-info"><h4>Management Information Systems</h4><span>Saylor Academy · 2025</span></div>
+      </div>
+
+      <div class="cert-card show" data-cat="business" data-img="images/cert-bus103.jpg" data-title="Introduction to Financial Accounting" data-meta="Saylor Academy · Issued 3 Nov 2025 · Grade 97.96 · 63 hours">
+        <div class="cert-thumb"><img src="images/cert-bus103.jpg" alt="Introduction to Financial Accounting certificate"></div>
+        <div class="cert-info"><h4>Financial Accounting</h4><span>Saylor Academy · 2025</span></div>
+      </div>
+
+      <div class="cert-card show" data-cat="business" data-img="images/cert-bus101.jpg" data-title="Introduction to Business" data-meta="Saylor Academy · Issued 11 Sep 2025 · Grade 95.35 · 62 hours">
+        <div class="cert-thumb"><img src="images/cert-bus101.jpg" alt="Introduction to Business certificate"></div>
+        <div class="cert-info"><h4>Introduction to Business</h4><span>Saylor Academy · 2025</span></div>
+      </div>
+
+      <div class="cert-card show" data-cat="business" data-img="images/cert-leadership.jpg" data-title="Management Leadership" data-meta="Saylor Academy · Issued 3 Nov 2025 · Grade 88.00 · 37 hours">
+        <div class="cert-thumb"><img src="images/cert-leadership.jpg" alt="Management Leadership certificate"></div>
+        <div class="cert-info"><h4>Management Leadership</h4><span>Saylor Academy · 2025</span></div>
+      </div>
+
+      <div class="cert-card show" data-cat="safety" data-img="images/cert-hse1.jpg" data-title="HSE Level 1 — Health &amp; Safety at Work" data-meta="UK SHE Organisation · Dec 2021 · Grade: Distinction">
+        <div class="cert-thumb"><img src="images/cert-hse1.jpg" alt="HSE Level 1 certificate"></div>
+        <div class="cert-info"><h4>HSE Level 1</h4><span>UK SHE Organisation · Distinction</span></div>
+      </div>
+
+      <div class="cert-card show" data-cat="safety" data-img="images/cert-hse2.jpg" data-title="HSE Level 2 — Risk Assessment Practical Application" data-meta="UK SHE Organisation · Dec 2021 · Grade: Credit">
+        <div class="cert-thumb"><img src="images/cert-hse2.jpg" alt="HSE Level 2 certificate"></div>
+        <div class="cert-info"><h4>HSE Level 2</h4><span>UK SHE Organisation · Credit</span></div>
+      </div>
+
+      <div class="cert-card show" data-cat="safety" data-img="images/cert-hse3.jpg" data-title="HSE Level 3 — Environmental Awareness" data-meta="UK SHE Organisation · Dec 2021 · Grade: Distinction">
+        <div class="cert-thumb"><img src="images/cert-hse3.jpg" alt="HSE Level 3 certificate"></div>
+        <div class="cert-info"><h4>HSE Level 3</h4><span>UK SHE Organisation · Distinction</span></div>
+      </div>
+
+      <div class="cert-card show" data-cat="safety" data-img="images/cert-eia.jpg" data-title="Environmental Impact Assessment" data-meta="Department of Petroleum Resources · 20 Dec 2021">
+        <div class="cert-thumb"><img src="images/cert-eia.jpg" alt="Environmental Impact Assessment certificate"></div>
+        <div class="cert-info"><h4>Environmental Impact Assessment</h4><span>Dept. of Petroleum Resources · 2021</span></div>
+      </div>
+
+      <div class="cert-card show" data-cat="safety" data-img="images/cert-firstaid.jpg" data-title="Basic First Aid / CPR" data-meta="NovelleCenter · 2021">
+        <div class="cert-thumb"><img src="images/cert-firstaid.jpg" alt="Basic First Aid CPR certificate"></div>
+        <div class="cert-info"><h4>Basic First Aid / CPR</h4><span>NovelleCenter · 2021</span></div>
+      </div>
+
+      <div class="cert-card show" data-cat="people" data-img="images/cert-hr.jpg" data-title="Human Resource Management" data-meta="Rahn Wesley Institute of Management · 20 Dec 2021">
+        <div class="cert-thumb"><img src="images/cert-hr.jpg" alt="Human Resource Management certificate"></div>
+        <div class="cert-info"><h4>Human Resource Management</h4><span>Rahn Wesley Institute · 2021</span></div>
+      </div>
+
+      <div class="cert-card show" data-cat="people" data-img="images/cert-pm-prof.jpg" data-title="Project Management — Professional Certificate" data-meta="British Project Management Academy · Dec 2021 · 10 PDUs, Category A">
+        <div class="cert-thumb"><img src="images/cert-pm-prof.jpg" alt="Project Management Professional Certificate"></div>
+        <div class="cert-info"><h4>Project Management — Professional</h4><span>PM Academy · 2021</span></div>
+      </div>
+
+      <div class="cert-card show" data-cat="people" data-img="images/cert-pm-grad.jpg" data-title="Project Management — Graduate Certificate" data-meta="British Project Management Academy · Dec 2021 · 10 PDUs, Category A">
+        <div class="cert-thumb"><img src="images/cert-pm-grad.jpg" alt="Project Management Graduate Certificate"></div>
+        <div class="cert-info"><h4>Project Management — Graduate</h4><span>PM Academy · 2021</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section class="pad" id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Education &amp; credentials</span>
+      <h2>Formal grounding, formally recognised.</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card" data-img="images/cert-university.jpg" data-title="B.Tech, Computer Engineering" data-meta="Ladoke Akintola University of Technology, Ogbomosho · Second Class Upper · Issued 07 June 2021">
+        <div class="edu-thumb"><img src="images/cert-university.jpg" alt="LAUTECH Bachelor of Technology certificate"></div>
+        <div class="edu-body">
+          <h3>B.Tech, Computer Engineering</h3>
+          <span class="edu-org">Ladoke Akintola University of Technology, Ogbomosho</span>
+          <p>Second Class Upper. Bachelor's degree admitted by Senate on completion of the approved course of study.</p>
+          <div class="edu-meta">2015 – 2021 · Certificate issued 07 June 2021</div>
+        </div>
+      </div>
+      <div class="edu-card" data-img="images/cert-nti.jpg" data-title="Post Graduate Diploma in Education" data-meta="National Teachers' Institute, Kaduna, affiliated to University of Ilorin · 2023 session · Issued 14 April 2025">
+        <div class="edu-thumb"><img src="images/cert-nti.jpg" alt="National Teachers Institute PGDE result"></div>
+        <div class="edu-body">
+          <h3>Post Graduate Diploma in Education</h3>
+          <span class="edu-org">National Teachers' Institute, Kaduna (affiliated to University of Ilorin)</span>
+          <p>Completed the course leading to the award of PGDE, 2023 session, passing all prescribed examinations. Centre: G.S.S. Karu, FCT Abuja.</p>
+          <div class="edu-meta">2023 Session · Result issued 14 April 2025</div>
+        </div>
+      </div>
+      <div class="edu-card" data-img="images/cert-trcn.jpg" data-title="Certified Teacher — TRCN" data-meta="Teachers' Registration Council of Nigeria · Registration No. CT/R/34047 · 14 October 2024">
+        <div class="edu-thumb"><img src="images/cert-trcn.jpg" alt="TRCN Certificate of Registration"></div>
+        <div class="edu-body">
+          <h3>Certified Teacher — TRCN</h3>
+          <span class="edu-org">Teachers' Registration Council of Nigeria</span>
+          <p>Duly registered by the Council as a Certified Teacher, having fulfilled all conditions provided in the Act establishing TRCN.</p>
+          <div class="edu-meta">Registration No. CT/R/34047 · 14 October 2024</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERESTS ============ -->
+<section class="pad on-ink">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Where my curiosity points next</span>
+      <h2>Professional interests</h2>
+    </div>
+    <div class="interest-grid">
+      <div class="interest-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg>
+        <h3>Communication technologies — 5G/6G</h3>
+        <p>Following how next-generation wireless standards are reshaping network design, latency, and capacity planning.</p>
+      </div>
+      <div class="interest-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3>Cybersecurity</h3>
+        <p>Grounded in an Information Security certification and Cisco's Introduction to Cybersecurity coursework.</p>
+      </div>
+      <div class="interest-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        <h3>AI for wireless networks</h3>
+        <p>Where my data &amp; AI studies meet my networking background — applying machine learning to signal and network optimisation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="pad" id="contact">
+  <div class="wrap contact-wrap">
+    <div class="contact-copy">
+      <span class="kicker">Get in touch</span>
+      <h2>Let's fix something, build something, or teach something.</h2>
+      <p>Open to opportunities in network administration, IT operations, technical &amp; customer support, or roles that blend technology with people. Based in Abuja, comfortable remote or on-site.</p>
+      <a href="Aanu-Afolabi-cv.pdf" download class="btn btn-dark">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
+        Download full CV
+      </a>
+    </div>
+    <div class="contact-cards">
+      <a class="contact-card" href="mailto:aanuoluwapoflb@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        <div><b>Email</b><span>aanuoluwapoflb@gmail.com</span></div>
+      </a>
+      <a class="contact-card" href="tel:+2348161243355">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 2 .6 3a2 2 0 01-.5 2L8 10a16 16 0 006 6l1.3-1.2a2 2 0 012-.5c1 .3 2 .5 3 .6a2 2 0 011.7 2z"/></svg>
+        <div><b>Phone</b><span>+234 816 124 3355</span></div>
+      </a>
+      <div class="contact-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><b>Location</b><span>Abuja, FCT, Nigeria</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="year"></span> Aanuoluwapo Isaac Afolabi</p>
+    <p>Built with real credentials, no filler.</p>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+  </button>
+  <div class="lightbox-inner">
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-text">
+      <h4 id="lightboxTitle"></h4>
+      <p id="lightboxMeta"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// live Abuja status
+function updateStatus(){
+  try{
+    var t = new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Africa/Lagos'}).format(new Date());
+    document.getElementById('statusText').textContent = 'Open to new opportunities — Abuja, Nigeria — ' + t + ' local';
+  }catch(e){}
+}
+updateStatus();
+setInterval(updateStatus, 30000);
+
+// nav solid on scroll + active link
+var nav = document.getElementById('siteNav');
+var sections = document.querySelectorAll('section[id], header[id]');
+var navLinks = document.querySelectorAll('.nav-links a[data-nav]');
+function onScroll(){
+  nav.classList.toggle('solid', window.scrollY > 40);
+  var pos = window.scrollY + 140;
+  var current = '';
+  sections.forEach(function(s){
+    if(pos >= s.offsetTop) current = s.id;
+  });
+  navLinks.forEach(function(a){
+    a.classList.toggle('active', a.getAttribute('href') === '#'+current);
+  });
+}
+document.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+
+// mobile menu
+var navToggle = document.getElementById('navToggle');
+var mobilePanel = document.getElementById('mobilePanel');
+navToggle.addEventListener('click', function(){
+  mobilePanel.classList.toggle('open');
+});
+mobilePanel.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click', function(){ mobilePanel.classList.remove('open'); });
+});
+
+// hero flip card
+var flipCard = document.getElementById('flipCard');
+flipCard.addEventListener('click', function(){
+  flipCard.classList.toggle('flipped');
+});
+flipCard.setAttribute('tabindex','0');
+flipCard.setAttribute('role','button');
+flipCard.setAttribute('aria-label','Click to flip photo');
+flipCard.addEventListener('keydown', function(e){
+  if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); flipCard.classList.toggle('flipped'); }
+});
+
+// timeline accordion
+document.querySelectorAll('.tl-header').forEach(function(h){
+  h.addEventListener('click', function(){
+    h.closest('.tl-item').classList.toggle('open');
+  });
+});
+// open first item by default
+document.querySelector('.tl-item').classList.add('open');
+
+// expertise tabs
+var tabBtns = document.querySelectorAll('.tab-btn');
+tabBtns.forEach(function(btn){
+  btn.addEventListener('click', function(){
+    tabBtns.forEach(function(b){ b.classList.remove('active'); });
+    document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+
+// skill bars reveal on scroll
+var skillRows = document.querySelectorAll('.skill-row');
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); }
+  });
+}, {threshold:0.3});
+skillRows.forEach(function(r){ io.observe(r); });
+
+// cert filters
+var filterBtns = document.querySelectorAll('.cert-filter');
+var certCards = document.querySelectorAll('.cert-card');
+filterBtns.forEach(function(btn){
+  btn.addEventListener('click', function(){
+    filterBtns.forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    var f = btn.dataset.filter;
+    certCards.forEach(function(c){
+      c.classList.toggle('show', f === 'all' || c.dataset.cat === f);
+    });
+  });
+});
+
+// lightbox
+var lightbox = document.getElementById('lightbox');
+var lbImg = document.getElementById('lightboxImg');
+var lbTitle = document.getElementById('lightboxTitle');
+var lbMeta = document.getElementById('lightboxMeta');
+var lightboxTriggers = document.querySelectorAll('.cert-card, .edu-card');
+lightboxTriggers.forEach(function(c){
+  c.addEventListener('click', function(){
+    var img = c.dataset.img;
+    if(!img) return; // no-image certs simply don't open
+    lbImg.src = img;
+    lbImg.alt = c.dataset.title || '';
+    lbTitle.textContent = c.dataset.title || '';
+    lbMeta.textContent = c.dataset.meta || '';
+    lightbox.classList.add('open');
+  });
+});
+document.getElementById('lightboxClose').addEventListener('click', function(){
+  lightbox.classList.remove('open');
+});
+lightbox.addEventListener('click', function(e){
+  if(e.target === lightbox) lightbox.classList.remove('open');
+});
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') lightbox.classList.remove('open');
+});
+</script>
+</body>
+</html>
