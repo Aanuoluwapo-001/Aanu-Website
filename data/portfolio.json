@@ -1,0 +1,343 @@
+{
+  "meta": {
+    "name": "Aanuoluwapo Isaac Afolabi",
+    "tagline": "Networks, support, and systems that keep people connected.",
+    "location": "Abuja, FCT, Nigeria",
+    "email": "aanuoluwapoflb@gmail.com",
+    "phone": "+2348161243355",
+    "phoneDisplay": "+234 816 124 3355"
+  },
+  "stats": [
+    { "value": "7+ yrs", "label": "IT, support & operations" },
+    { "value": "\u20a62M+", "label": "saved on infrastructure projects" },
+    { "value": "16", "label": "professional certifications" }
+  ],
+  "timeline": [
+    {
+      "role": "Support Intern",
+      "org": "LAUTECH ICT Centre",
+      "location": "Ogbomosho, Nigeria",
+      "start": "May 2019",
+      "end": "Dec 2019",
+      "bullets": [
+        "Contributed to the design, implementation, and maintenance of LAN, MAN, and WAN infrastructure.",
+        "Provided dedicated technical support for network-related challenges, troubleshooting connectivity issues.",
+        "Documented network configurations, operational procedures, and troubleshooting guides.",
+        "Executed routine maintenance to guarantee optimal performance and security.",
+        "Collaborated with the IT team to develop and deploy network configurations."
+      ]
+    },
+    {
+      "role": "Intern",
+      "org": "BAYTEM Computer Engineering Enterprises",
+      "location": "Nigeria",
+      "start": "May 2019",
+      "end": "Aug 2021",
+      "bullets": [
+        "Resolved complex technical issues, significantly reducing system downtime.",
+        "Optimised network performance and security through efficient network management practices.",
+        "Leveraged the Microsoft ecosystem and VMware to enhance system performance.",
+        "Managed collaboration tools, improving team productivity and inter-departmental communication."
+      ]
+    },
+    {
+      "role": "IT Support (Remote)",
+      "org": "Seyi Online Services",
+      "location": "Nigeria",
+      "start": "May 2021",
+      "end": "Aug 2023",
+      "bullets": [
+        "Remotely resolved intricate technical issues, minimising downtime and lifting productivity.",
+        "Delivered prompt, effective technical support that enhanced customer satisfaction.",
+        "Authored and maintained detailed documentation of technical issues and their resolutions."
+      ]
+    },
+    {
+      "role": "Network Administrator / Assistant Chief of Staff (Admin) & HR Manager",
+      "org": "Fixxers Telecommunications Limited",
+      "location": "Abuja, Nigeria",
+      "start": "Sep 2021",
+      "end": "Mar 2024",
+      "bullets": [
+        "Directed personnel operations, overseeing staff management and professional development.",
+        "Formulated and enforced organisational policies to improve efficiency and compliance.",
+        "Conducted network infrastructure surveys and maintained intricate network architectures.",
+        "Configured IP phones and communication systems for seamless on-site operations.",
+        "Managed projects to a cost saving of over \u20a62 million.",
+        "Instituted network management practices that guaranteed reliable, secure operations."
+      ]
+    },
+    {
+      "role": "Digital Technologies Teacher / Exam Officer",
+      "org": "The NAOWA College",
+      "location": "Kurudu, Abuja, Nigeria",
+      "start": "May 2024",
+      "end": "Present",
+      "bullets": [
+        "Consistently achieved high WAEC and NECO examination pass rates.",
+        "Mentored students in the Coding Club, leading them to victory in local coding competitions.",
+        "Spearheaded network upgrades to improve performance and minimise downtime.",
+        "Designed, implemented, and maintained the school's Computer-Based Test system.",
+        "Coordinated athletics and ball games teams, guiding them to competition medals."
+      ]
+    },
+    {
+      "role": "Freelance IT & Customer Support Specialist",
+      "org": "Self-employed",
+      "location": "Remote",
+      "start": "2023",
+      "end": "Present",
+      "bullets": [
+        "Delivered remote technical support to clients including Seyi Online Services and Fixxers Telecommunications.",
+        "Provided multichannel customer support via email, live chat, and phone with consistently high satisfaction.",
+        "Diagnosed and resolved network, VPN, and remote-access issues for a geographically distributed client base.",
+        "Managed help-desk tickets end-to-end, prioritising by severity and impact.",
+        "Authored knowledge-base articles and FAQs to streamline future support.",
+        "Collaborated with cross-functional remote teams across multiple time zones."
+      ]
+    }
+  ],
+  "skills": [
+    { "name": "Network administration", "tier": "Core strength", "level": 4 },
+    { "name": "Technical troubleshooting", "tier": "Core strength", "level": 4 },
+    { "name": "Customer support", "tier": "Core strength", "level": 4 },
+    { "name": "Teaching & mentorship", "tier": "Advanced", "level": 3 },
+    { "name": "HR & people management", "tier": "Advanced", "level": 3 },
+    { "name": "Project management", "tier": "Advanced", "level": 3 },
+    { "name": "Health, safety & environment", "tier": "Advanced", "level": 3 },
+    { "name": "Python programming", "tier": "Advanced", "level": 3 },
+    { "name": "Data analytics & AI", "tier": "Advanced", "level": 3 }
+  ],
+  "certifications": [
+    {
+      "title": "Information Security",
+      "issuer": "Saylor Academy",
+      "date": "10 Sep 2025",
+      "grade": 95.92,
+      "hours": 46,
+      "image": "images/cert-infosec.jpg",
+      "category": "tech",
+      "meta": "Saylor Academy \u00b7 Issued 10 Sep 2025 \u00b7 Grade 95.92 \u00b7 46 hours"
+    },
+    {
+      "title": "Software Engineering",
+      "issuer": "Saylor Academy",
+      "date": "11 Sep 2025",
+      "grade": 82.26,
+      "hours": 36,
+      "image": "images/cert-swe.jpg",
+      "category": "tech",
+      "meta": "Saylor Academy \u00b7 Issued 11 Sep 2025 \u00b7 Grade 82.26 \u00b7 36 hours"
+    },
+    {
+      "title": "Introduction to Cybersecurity",
+      "issuer": "Cisco Networking Academy",
+      "date": "12 Jul 2022",
+      "grade": null,
+      "hours": null,
+      "image": "images/cert-cyber.jpg",
+      "category": "tech",
+      "meta": "Cisco Networking Academy \u00b7 Completed 12 Jul 2022"
+    },
+    {
+      "title": "Data Analytics & AI",
+      "issuer": "Ihifix Academy",
+      "date": "2026",
+      "grade": null,
+      "hours": null,
+      "image": null,
+      "category": "business",
+      "meta": "Ihifix Academy \u00b7 2026"
+    },
+    {
+      "title": "Management Information Systems",
+      "issuer": "Saylor Academy",
+      "date": "3 Nov 2025",
+      "grade": 88.00,
+      "hours": 57,
+      "image": "images/cert-mis.jpg",
+      "category": "business",
+      "meta": "Saylor Academy \u00b7 Issued 3 Nov 2025 \u00b7 Grade 88.00 \u00b7 57 hours"
+    },
+    {
+      "title": "Financial Accounting",
+      "issuer": "Saylor Academy",
+      "date": "3 Nov 2025",
+      "grade": 97.96,
+      "hours": 63,
+      "image": "images/cert-bus103.jpg",
+      "category": "business",
+      "meta": "Saylor Academy \u00b7 Issued 3 Nov 2025 \u00b7 Grade 97.96 \u00b7 63 hours"
+    },
+    {
+      "title": "Introduction to Business",
+      "issuer": "Saylor Academy",
+      "date": "11 Sep 2025",
+      "grade": 95.35,
+      "hours": 62,
+      "image": "images/cert-bus101.jpg",
+      "category": "business",
+      "meta": "Saylor Academy \u00b7 Issued 11 Sep 2025 \u00b7 Grade 95.35 \u00b7 62 hours"
+    },
+    {
+      "title": "Management Leadership",
+      "issuer": "Saylor Academy",
+      "date": "3 Nov 2025",
+      "grade": 88.00,
+      "hours": 37,
+      "image": "images/cert-leadership.jpg",
+      "category": "business",
+      "meta": "Saylor Academy \u00b7 Issued 3 Nov 2025 \u00b7 Grade 88.00 \u00b7 37 hours"
+    },
+    {
+      "title": "HSE Level 1",
+      "issuer": "UK SHE Organisation",
+      "date": "Dec 2021",
+      "grade": null,
+      "hours": null,
+      "image": "images/cert-hse1.jpg",
+      "category": "safety",
+      "meta": "UK SHE Organisation \u00b7 Dec 2021 \u00b7 Grade: Distinction"
+    },
+    {
+      "title": "HSE Level 2",
+      "issuer": "UK SHE Organisation",
+      "date": "Dec 2021",
+      "grade": null,
+      "hours": null,
+      "image": "images/cert-hse2.jpg",
+      "category": "safety",
+      "meta": "UK SHE Organisation \u00b7 Dec 2021 \u00b7 Grade: Credit"
+    },
+    {
+      "title": "HSE Level 3",
+      "issuer": "UK SHE Organisation",
+      "date": "Dec 2021",
+      "grade": null,
+      "hours": null,
+      "image": "images/cert-hse3.jpg",
+      "category": "safety",
+      "meta": "UK SHE Organisation \u00b7 Dec 2021 \u00b7 Grade: Distinction"
+    },
+    {
+      "title": "Environmental Impact Assessment",
+      "issuer": "Dept. of Petroleum Resources",
+      "date": "20 Dec 2021",
+      "grade": null,
+      "hours": null,
+      "image": "images/cert-eia.jpg",
+      "category": "safety",
+      "meta": "Department of Petroleum Resources \u00b7 20 Dec 2021"
+    },
+    {
+      "title": "Basic First Aid / CPR",
+      "issuer": "NovelleCenter",
+      "date": "2021",
+      "grade": null,
+      "hours": null,
+      "image": "images/cert-firstaid.jpg",
+      "category": "safety",
+      "meta": "NovelleCenter \u00b7 2021"
+    },
+    {
+      "title": "Human Resource Management",
+      "issuer": "Rahn Wesley Institute of Management",
+      "date": "20 Dec 2021",
+      "grade": null,
+      "hours": null,
+      "image": "images/cert-hr.jpg",
+      "category": "people",
+      "meta": "Rahn Wesley Institute \u00b7 20 Dec 2021"
+    },
+    {
+      "title": "Project Management \u2014 Professional",
+      "issuer": "British Project Management Academy",
+      "date": "Dec 2021",
+      "grade": null,
+      "hours": null,
+      "image": "images/cert-pm-prof.jpg",
+      "category": "people",
+      "meta": "PM Academy \u00b7 Dec 2021 \u00b7 10 PDUs, Category A"
+    },
+    {
+      "title": "Project Management \u2014 Graduate",
+      "issuer": "British Project Management Academy",
+      "date": "Dec 2021",
+      "grade": null,
+      "hours": null,
+      "image": "images/cert-pm-grad.jpg",
+      "category": "people",
+      "meta": "PM Academy \u00b7 Dec 2021 \u00b7 10 PDUs, Category A"
+    }
+  ],
+  "education": [
+    {
+      "title": "B.Tech, Computer Engineering",
+      "org": "Ladoke Akintola University of Technology, Ogbomosho",
+      "description": "Second Class Upper. Bachelor's degree admitted by Senate on completion of the approved course of study.",
+      "meta": "2015 \u2013 2021 \u00b7 Certificate issued 07 June 2021",
+      "image": "images/cert-university.jpg"
+    },
+    {
+      "title": "Post Graduate Diploma in Education",
+      "org": "National Teachers' Institute, Kaduna (affiliated to University of Ilorin)",
+      "description": "Completed the course leading to the award of PGDE, 2023 session, passing all prescribed examinations. Centre: G.S.S. Karu, FCT Abuja.",
+      "meta": "2023 Session \u00b7 Result issued 14 April 2025",
+      "image": "images/cert-nti.jpg"
+    },
+    {
+      "title": "Certified Teacher \u2014 TRCN",
+      "org": "Teachers' Registration Council of Nigeria",
+      "description": "Duly registered by the Council as a Certified Teacher, having fulfilled all conditions provided in the Act establishing TRCN.",
+      "meta": "Registration No. CT/R/34047 \u00b7 14 October 2024",
+      "image": "images/cert-trcn.jpg"
+    }
+  ],
+  "projects": [
+    {
+      "tag": "Education \u00b7 systems",
+      "title": "School Computer-Based Test system",
+      "description": "Designed, implemented, and maintain the Computer-Based Test platform used for exams at The NAOWA College \u2014 from infrastructure setup to day-to-day reliability during exam windows.",
+      "org": "The NAOWA College",
+      "period": "2024 \u2013 ongoing",
+      "comingSoon": false
+    },
+    {
+      "tag": "Telecommunications \u00b7 infrastructure",
+      "title": "Network infrastructure upgrade",
+      "description": "Led network infrastructure surveys, redesigned parts of the network architecture, and configured IP telephony systems at Fixxers Telecommunications \u2014 delivering project cost savings exceeding \u20a62 million.",
+      "org": "Fixxers Telecommunications",
+      "period": "2021 \u2013 2024",
+      "comingSoon": false
+    },
+    {
+      "tag": "Mentorship \u00b7 education",
+      "title": "Coding Club mentorship program",
+      "description": "Coach and mentor for The NAOWA College Coding Club, guiding students through their first real programs and into local coding competitions \u2014 which they've gone on to win.",
+      "org": "The NAOWA College",
+      "period": "2024 \u2013 ongoing",
+      "comingSoon": false
+    },
+    {
+      "tag": "Coming soon",
+      "title": "The Aanu Platform",
+      "description": "",
+      "org": "",
+      "period": "",
+      "comingSoon": true
+    }
+  ],
+  "achievements": [
+    { "num": "\u20a62M+", "title": "Project cost savings", "desc": "Delivered through successful network infrastructure project management at Fixxers Telecommunications." },
+    { "num": "3", "title": "HSE certification levels", "desc": "Completed Levels 1, 2 & 3 with the UK SHE Organisation \u2014 two of them with Distinction." },
+    { "num": "1", "title": "Coding Club, competition-winning", "desc": "Mentored The NAOWA College Coding Club to victory in local coding competitions." },
+    { "num": "\u2191", "title": "WAEC & NECO pass rates", "desc": "Consistently high student pass rates as Digital Technologies teacher and exam officer." },
+    { "num": "1", "title": "CBT system, built & maintained", "desc": "Designed and continue to maintain the school's Computer-Based Test examination system." },
+    { "num": "\ud83c\udfc5", "title": "Athletics & ball games medals", "desc": "Coordinated school sports teams to medal finishes in inter-school competitions." }
+  ],
+  "interests": [
+    { "title": "Communication technologies \u2014 5G/6G", "desc": "Following how next-generation wireless standards are reshaping network design, latency, and capacity planning." },
+    { "title": "Cybersecurity", "desc": "Grounded in an Information Security certification and Cisco's Introduction to Cybersecurity coursework." },
+    { "title": "AI for wireless networks", "desc": "Where my data & AI studies meet my networking background \u2014 applying machine learning to signal and network optimisation." }
+  ]
+}
